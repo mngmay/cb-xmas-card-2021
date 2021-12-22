@@ -1,0 +1,260 @@
+// fonts
+@import url("https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&display=swap");
+
+// breakpoints
+$mobile: 925px;
+
+// variables
+$paper: #fbfbf8;
+$light-gray: #eae4e2;
+$gray: #d0ced0;
+$light-blue: #add1eb;
+$sky-blue: #5ecdef;
+$xmas-red: #c30f16;
+$xmas-green: #1e792c;
+
+$xmas-font: "Mountains of Christmas", cursive;
+
+// mixins
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 3.5rem;
+  font-family: $xmas-font;
+
+  @include mobile {
+    font-size: 2rem;
+  }
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background: linear-gradient(
+    180deg,
+    rgba($sky-blue, 0.6) -20%,
+    rgba(173, 209, 235, 1) 70%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+h1,
+h2,
+h3 {
+  font-family: $xmas-font;
+}
+
+h1 {
+  font-size: 5rem;
+  @include mobile {
+    font-size: 3rem;
+  }
+}
+
+h2 {
+  margin: 0 0 20px 0;
+}
+
+button {
+  cursor: pointer;
+  background-color: $paper;
+  font-size: 2rem;
+  width: 150px;
+  border-radius: 10%;
+  border: 2px solid $xmas-red;
+}
+
+button:hover {
+  background-color: rgba($light-gray, 0.5);
+}
+
+button.active {
+  border: 2px solid $xmas-green;
+}
+
+.col,
+.row {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.round {
+  border-radius: 50%;
+  border: 8px double rgba($xmas-green, 0.7);
+}
+
+.pos-right {
+  align-self: flex-end;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  margin-bottom: 1rem;
+}
+
+.card-container {
+  width: 100%;
+
+  @include mobile {
+    max-width: 400px;
+
+    .full-img {
+      max-height: 100%;
+    }
+  }
+}
+
+.page-container {
+  border-radius: 15px;
+  border: 2px solid $xmas-red;
+  background: $paper;
+  padding: 20px;
+}
+
+.page {
+  justify-content: space-between;
+  height: 100%;
+}
+
+// shift center when only displaying 1 cover
+
+.page-container.front {
+  position: relative;
+  transform: translateX(-50%);
+
+  @include mobile {
+    transform: none;
+  }
+}
+
+.page-container.back {
+  position: relative;
+  transform: translateX(50%);
+
+  @include mobile {
+    transform: none;
+  }
+}
+
+// img ratios
+
+.main-img {
+  max-width: 60%;
+  height: auto;
+}
+
+.half-img {
+  max-width: 50%;
+  height: auto;
+}
+
+.full-img {
+  max-width: 100%;
+}
+
+// Pages
+
+.cover-title {
+  font-size: 4.5rem;
+
+  @include mobile {
+    font-size: 3rem;
+  }
+}
+
+.avatar-container {
+  justify-content: flex-start;
+  height: 60%;
+}
+
+.avatar {
+  @include mobile {
+    height: 120px;
+  }
+}
+
+.names {
+  justify-content: space-around;
+}
+
+.tree {
+  position: relative;
+  max-height: 40%;
+  bottom: 15%;
+
+  @include mobile {
+    bottom: 0;
+  }
+} // end cover
+
+.camille {
+  align-self: center;
+}
+
+.clara {
+  align-self: flex-end;
+}
+
+.marcus {
+  align-self: flex-start;
+} // end kids
+
+.interests,
+.interest {
+  justify-content: space-around;
+}
+
+.interests {
+  height: 90%;
+
+  @include mobile {
+    height: 85%;
+  }
+}
+
+.interest:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.interest.row {
+  max-height: 33%;
+}
+
+.interest > img {
+  max-height: 100%;
+  height: auto;
+} // end interests
+
+// scenery
+
+.snowflake {
+  color: #fff;
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+  text-shadow: 0 0 5px #000;
+}
