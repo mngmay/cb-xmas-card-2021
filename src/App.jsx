@@ -14,7 +14,7 @@ import tesla from "./assets/tesla.jpeg";
 import stonks from "./assets/paperhands.jpeg";
 import tacos from "./assets/cheaptacos.jpeg";
 import date from "./assets/date.jpeg";
-import cloy from "./assets/cloy.jpeg";
+import cloy from "./assets/cloy.png";
 import worms from "./assets/worms.jpeg";
 import excel from "./assets/excel.jpeg";
 import santa from "./assets/santa.png";
