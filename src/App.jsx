@@ -96,7 +96,7 @@ function App() {
           type="button"
           onClick={() => setSnow(!snow)}
         >
-          {snow ? snowMsgs.start : snowMsgs.stop}
+          {snow ? snowMsgs.stop : snowMsgs.start}
         </button>
         <button
           className={!hideSnow && "active"}
