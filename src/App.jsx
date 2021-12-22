@@ -85,6 +85,8 @@ function App() {
     hideSnow ? hideSnowflakes() : showSnowflakes();
   }, [snow, hideSnow]);
 
+  // button spacing
+
   return (
     <div className="container col">
       <div className="title">
@@ -188,7 +190,7 @@ function App() {
           <Page pg="6">
             <h2>So enjoy a romantic date on us</h2>
             <img className="main-img" src={date} alt="romantic date" />
-            <h2>with complementary babysitting</h2>
+            <h2>with complimentary babysitting</h2>
           </Page>
 
           <PageCover type="back">
